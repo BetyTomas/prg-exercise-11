@@ -22,14 +22,19 @@ def selection_sort(values):
 
 def bubble_sort(values):
 
-    for i in range(len(values)- 1):
-        prvni_cislo = values[i]
-        druhe_cislo = values[i + 1]
-
-        if prvni_cislo > druhe_cislo:
-            prvni_cislo, druhe_cislo = druhe_cislo, prvni_cislo
+    for i in range(len(values)):
+        for j in range(0, len(values)-1):
+            if values[j] > values[j + 1]:
+                values[j], values[j + 1] = values[j + 1], values[j]
 
     return values
+
+
+
+
+
+
+
 
 
 
